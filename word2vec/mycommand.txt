@@ -1,0 +1,7 @@
+time ./word2vec -train nlpir.txt -output vectors_nlpir.bin -cbow 0 -size 300 -window 10 -negative 0 -hs 1 -sample 1e-3 -threads 20 -binary 0 -iter 3
+
+./distance vectors_nlpir.bin
+
+time ./word2vec -train jieba.txt -output vectors_jieba.bin -cbow 0 -size 300 -window 10 -negative 0 -hs 1 -sample 1e-3 -threads 20 -binary 0 -iter 3
+
+./distance vectors_jieba.bin
